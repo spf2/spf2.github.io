@@ -8,7 +8,9 @@
 	ws.onmessage = function(msg) {
 		console.log(msg.data);
 		if (msg.data == "wait") {
+			document.body.style.opacity=0.5;
 		} else if (msg.data == "ok") {
+			document.body.style.opacity=1;
 		} else {
 			updateComputer(msg.data);
 		}
